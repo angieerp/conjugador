@@ -85,7 +85,9 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 
 import streamlit as st
+import streamlit as st
 
+st.header('Verbo', divider='rainbow')
 base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
 
@@ -96,19 +98,25 @@ if base.endswith('y'):
     base = base[:-1]
 
 #para persona
+import streamlit as st
 
+st.header('Persona', divider='rainbow')
 persona = st.selectbox(
     "Seleccione una persona:",
     ["primera inclusiva","primera exclusiva","segunda","tercera"])
     
 st.write("Seleccionaste:",persona)
+import streamlit as st
 
+st.header('Tiempo', divider='rainbow')
 tiempo = st.selectbox(
     "Seleccione un tiempo:",
     ["presente simple","presente progresivo", "presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple", "pasado no experimentado progres","pasado no experimentado habitua"])
 
 #para número
+import streamlit as st
 
+st.header('Número', divider='rainbow')
 numero = st.selectbox(
     "Seleccione un número:",
     ["singular","plural"])
