@@ -11,15 +11,15 @@ verbos = pd.read_excel ('quechua.xlsx')
 
 import pandas as pd
 
-quechua = pd.read_excel('quechua.xlsx')
+quechua = pd.read_excel('tiempo.xlsx')
 
-quechua = pd.ExcelFile('quechua.xlsx')
+quechua = pd.ExcelFile('tiempo.xlsx')
 
 D = {}
 
 for hoja in quechua.sheet_names:
 
-  df = pd.read_excel ('quechua.xlsx', sheet_name=hoja)
+  df = pd.read_excel ('tiempo.xlsx', sheet_name=hoja)
   c = df.columns
   df.set_index(c[0], inplace=True)
   print (f'Hoja:{hoja}')
