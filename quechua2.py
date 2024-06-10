@@ -108,3 +108,7 @@ numero = st.selectbox(
 
 st.write("Seleccionaste:", numero)
 st.write("El verbo conjugado es:", conjugacion2(base,numero,persona,tiempo))
+
+import streamlit as st
+
+st.title('Conjugador de verbos en quechua')
