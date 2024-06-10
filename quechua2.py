@@ -10,7 +10,7 @@ import streamlit as st
 
 st.title(':rainbow[Conjugador de verbos en quechua]')
 
-st.markdown("Here's a bouquet &mdash;\
+st.markdown("\
             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
 
 verbos = pd.read_excel ('quechua.xlsx')
