@@ -81,6 +81,9 @@ import streamlit as st
 
 base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
+
+if base.endswith('y'):
+    base = base[:-1]
     
 st.write("El verbo en espanol es:",dict_que_esp[base])
 
