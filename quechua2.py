@@ -6,6 +6,51 @@ import pandas as pd
 
 verbos = pd.read_excel ('quechua.xlsx')
 
+######################################################################
+#######################################################################
+
+import pandas as pd
+
+quechua = pd.read_excel('quechua.xlsx')
+
+quechua = pd.ExcelFile('quechua.xlsx')
+
+D = {}
+
+for hoja in quechua.sheet_names:
+
+  df = pd.read_excel ('quechua.xlsx', sheet_name=hoja)
+  c = df.columns
+  df.set_index(c[0], inplace=True)
+  print (f'Hoja:{hoja}')
+  print (df.head())
+
+  d = df.to_dict()
+
+  D[hoja] = d
+
+
+def conj_quechua(base,numero,persona,tiempo):
+  return base + D[tiempo][numero][persona]
+
+quechua_pronombres = pd.read_excel('pronombres.xlsx')
+
+pronombres = pd.ExcelFile('pronombres.xlsx')
+
+DP = {}
+
+dfp = pd.read_excel ('pronombres.xlsx')
+c = dfp.columns
+dfp.set_index(c[0], inplace=True)
+
+dp = dfp.to_dict()
+
+def conjugacion2(base,numero,persona,tiempo):
+  return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
+
+#######################################################################
+#######################################################################
+
 ##diccionario
 
 quechua = list(verbos['quechua'])
