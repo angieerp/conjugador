@@ -62,10 +62,10 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 import streamlit as st
 
-option = st.selectbox(
+base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
     
-st.write("El verbo en espanol es:",dict_que_esp[option])
+st.write("El verbo en espanol es:",dict_que_esp[base])
 
 
 #para persona
@@ -76,6 +76,10 @@ persona = st.selectbox(
     
 st.write("Seleccionaste:",persona)
 
+tiempo = st.selectbox(
+    "Seleccione un tiempo:",
+    ["presente simple","presente progresivo", "presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple", "pasado no experimentado progresivo","pasado no experimentado habitua"])
+
 #para número
 
 numero = st.selectbox(
@@ -83,3 +87,4 @@ numero = st.selectbox(
     ["singular","plural"])
 
 st.write("Seleccionaste:", numero)
+st.write("El verbo conjugado es:", conjugacion2(base,numero,persona,tiempo))
