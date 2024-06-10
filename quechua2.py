@@ -125,5 +125,5 @@ numero = st.selectbox(
     ["singular","plural"])
 
 st.write("Seleccionaste:", numero)
-st.write("El verbo conjugado es:", st.markdown(':blue-backround[conjugacion2(base,numero,persona,tiempo)]'))
+st.write("El verbo conjugado es:", conjugacion2(base,numero,persona,tiempo))
 
