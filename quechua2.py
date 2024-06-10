@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 
+
+
 #leemos el excel
 
 import pandas as pd
+
+import streamlit as st
+
+st.title(':rainbow[Conjugador de verbos en quechua]')
 
 verbos = pd.read_excel ('quechua.xlsx')
 
@@ -77,6 +83,7 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 ##importamos streamlit
 
+
 import streamlit as st
 
 base = st.selectbox(
@@ -109,6 +116,3 @@ numero = st.selectbox(
 st.write("Seleccionaste:", numero)
 st.write("El verbo conjugado es:", conjugacion2(base,numero,persona,tiempo))
 
-import streamlit as st
-
-st.title('Conjugador de verbos en quechua')
