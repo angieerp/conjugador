@@ -131,7 +131,7 @@ st.header('Tiempo', divider='rainbow')
 tiempo = st.selectbox(
     "Seleccione un tiempo:",
     ["presente simple","presente progresivo", "presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple", "pasado no experimentado progres","pasado no experimentado habitua"])
-st.write("Seleccionaste:",tiempo)
+st.write("**Seleccionaste:**",tiempo)
 #para número
 import streamlit as st
 
@@ -140,6 +140,6 @@ numero = st.selectbox(
     "Seleccione un número:",
     ["singular","plural"])
 
-st.write("Seleccionaste:", numero)
+st.write("**Seleccionaste:**", numero)
 st.write("El verbo conjugado es:", conjugacion2(base,numero,persona,tiempo))
 
