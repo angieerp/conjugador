@@ -12,6 +12,11 @@ st.title(':rainbow[Conjugador de verbos en quechua]')
 
 st.markdown("\
             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
+            
+st.markdown("""
+¡Bienvenido al conjugador de verbos en quechua! En esta aplicación podrás ingresar verbos del quechua a chanca y conjugarlos según la persona, el número y el tiempo gramatical. Si necesitas información extra sobre cada uno de estos rasgos gramaticales solo necesitas clickear debajo
+""")
+
 
 verbos = pd.read_excel ('quechua.xlsx')
 
