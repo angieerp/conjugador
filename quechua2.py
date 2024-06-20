@@ -112,6 +112,17 @@ st.header('Persona', divider='rainbow')
 persona = st.selectbox(
     "Seleccione una persona:",
     ["primera inclusiva","primera exclusiva","segunda","tercera"])
+
+# Contenido adicional que quieres mostrar
+contenido_info = """
+Esta distinción solo se va a dar en el caso de que se trate de la primer persona plural "nosotros"
+El uso del pronombre de la primera persona inclusiva implica que el hablante está hablando con la persona a la que se dirige y también se incluye a sí mismo en el grupo. .
+El uso de la primera persona exclusiva indica que el hablante está hablando de un grupo que no incluye a la persona a la que se dirige, es decir, excluye a solamente al interlocutor.
+"""
+
+# Botón para mostrar u ocultar la información
+if st.button("ℹ️ ¿Qué significa primer persona inclusiva y exclusiva?"):
+    st.write(contenido_info)
     
 st.write("Seleccionaste:",persona)
 import streamlit as st
