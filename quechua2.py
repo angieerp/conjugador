@@ -148,12 +148,6 @@ tiempo = st.selectbox(
 )
 
 
-# Mostrar explicaciones de tiempo y botón para mostrar/ocultar
-st.markdown("""
-    En esta aplicación, puedes seleccionar diferentes opciones de tiempo para conjugar verbos en quechua. 
-    Utiliza el botón 'Mostrar Información' para obtener más detalles sobre cada opción de tiempo gramatical.
-""")
-
 
 if tiempo:
     
