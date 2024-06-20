@@ -145,7 +145,7 @@ st.header('Tiempo', divider='rainbow')
 tiempo = st.selectbox(
     "Seleccione un tiempo:",
     list(explicaciones_tiempo.keys())
-
+)
 
 
 # Mostrar explicaciones de tiempo y botón para mostrar/ocultar
