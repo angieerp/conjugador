@@ -131,6 +131,35 @@ st.header('Tiempo', divider='rainbow')
 tiempo = st.selectbox(
     "Seleccione un tiempo:",
     ["presente simple","presente progresivo", "presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple", "pasado no experimentado progres","pasado no experimentado habitua"])
+
+explicaciones_tiempo = {
+    "presente simple": "El presente simple indica acciones que ocurren habitualmente en el presente.",
+    "presente progresivo": "El presente progresivo indica acciones que están ocurriendo en el momento de hablar.",
+    "presente habitual": "El presente habitual indica acciones que ocurren regularmente, pero no necesariamente en el momento presente.",
+    "pasado experimentado simple": "El pasado experimentado simple indica acciones pasadas que el hablante experimentó personalmente.",
+    "pasado experimentado progresivo": "El pasado experimentado progresivo indica acciones pasadas que estaban ocurriendo en un momento específico del pasado.",
+    "pasado experimentado habitual": "El pasado experimentado habitual indica acciones pasadas que ocurrían regularmente en el pasado.",
+    "pasado no experimentado simple": "El pasado no experimentado simple indica acciones pasadas que no fueron experimentadas personalmente por el hablante.",
+    "pasado no experimentado progres": "El pasado no experimentado progresivo indica acciones pasadas que estaban ocurriendo en un momento específico del pasado, pero no fueron experimentadas personalmente por el hablante.",
+    "pasado no experimentado habitua": "El pasado no experimentado habitual indica acciones pasadas que ocurrían regularmente en el pasado, pero no fueron experimentadas personalmente por el hablante."
+}
+
+# Mostrar explicaciones de tiempo y botón para mostrar/ocultar
+st.markdown("""
+    En esta aplicación, puedes seleccionar diferentes opciones de tiempo para conjugar verbos en quechua. 
+    Utiliza el botón 'Mostrar Información' para obtener más detalles sobre cada opción de tiempo gramatical.
+""")
+
+for tiempo, explicacion in explicaciones_tiempo.items():
+    st.header(tiempo.capitalize())
+    st.write(explicacion)
+
+# Botón para mostrar u ocultar las explicaciones
+if st.button("Mostrar Información"):
+    for tiempo, explicacion in explicaciones_tiempo.items():
+        st.header(tiempo.capitalize())
+        st.write(explicacion)
+
 st.write("**Seleccionaste:**",tiempo)
 #para número
 import streamlit as st
