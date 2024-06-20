@@ -121,7 +121,7 @@ El uso de la primera persona exclusiva indica que el hablante está hablando de 
 """
 
 # Botón para mostrar u ocultar la información
-if st.button("ℹ️ ¿Qué significa primer persona inclusiva y exclusiva?"):
+if st.button("ℹ️ ¿Cuál es la diferencia entre primera persona inclusiva y exclusiva?"):
     st.write(contenido_info)
     
 st.write("Seleccionaste:",persona)
