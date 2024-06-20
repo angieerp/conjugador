@@ -129,11 +129,6 @@ if st.button("ℹ️ ¿Cuál es la diferencia entre primera persona inclusiva y 
 st.write("**Seleccionaste:**", persona)
 import streamlit as st
 
-st.header('Tiempo', divider='rainbow')
-tiempo = st.selectbox(
-    "Seleccione un tiempo:",
-    ["presente simple","presente progresivo", "presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple", "pasado no experimentado progres","pasado no experimentado habitua"])
-
 explicaciones_tiempo = {
     "presente simple": "El presente simple indica acciones que ocurren habitualmente en el presente.",
     "presente progresivo": "El presente progresivo indica acciones que están ocurriendo en el momento de hablar.",
@@ -146,6 +141,13 @@ explicaciones_tiempo = {
     "pasado no experimentado habitua": "El pasado no experimentado habitual indica acciones pasadas que ocurrían regularmente en el pasado, pero no fueron experimentadas personalmente por el hablante."
 }
 
+st.header('Tiempo', divider='rainbow')
+tiempo = st.selectbox(
+    "Seleccione un tiempo:",
+    list(explicaciones_tiempo.keys())
+
+
+
 # Mostrar explicaciones de tiempo y botón para mostrar/ocultar
 st.markdown("""
     En esta aplicación, puedes seleccionar diferentes opciones de tiempo para conjugar verbos en quechua. 
@@ -153,11 +155,9 @@ st.markdown("""
 """)
 
 
-# Botón para mostrar u ocultar las explicaciones
-if st.button("Mostrar Información"):
-    for tiempo, explicacion in explicaciones_tiempo.items():
-        st.header(tiempo.capitalize())
-        st.write(explicacion)
+if tiempo:
+    
+    st.write(explicaciones_tiempo[tiempo])
 
 st.write("**Seleccionaste:**",tiempo)
 #para número
