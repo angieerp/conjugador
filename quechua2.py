@@ -124,7 +124,7 @@ El uso de la primera persona exclusiva indica que el hablante está hablando de 
 if st.button("ℹ️ ¿Cuál es la diferencia entre primera persona inclusiva y exclusiva?"):
     st.write(contenido_info)
     
-st.write("Seleccionaste:",persona)
+st.write("**Seleccionaste:**", "**", persona, "**")
 import streamlit as st
 
 st.header('Tiempo', divider='rainbow')
