@@ -117,7 +117,7 @@ persona = st.selectbox(
 contenido_info = """
 Esta distinción solo se va a dar en el caso de que se trate de la primer persona plural "nosotros".
 El uso del pronombre de la primera persona inclusiva implica que el hablante está hablando con la persona a la que se dirige y también se incluye a sí mismo en el grupo.
-El uso de la primera persona exclusiva indica que el hablante está hablando de un grupo que no incluye a la persona a la que se dirige, es decir, excluye a solamente al interlocutor.
+El uso de la primera persona exclusiva indica que el hablante está hablando de un grupo que no incluye a la persona a la que se dirige, es decir, excluye solamente al interlocutor.
 """
 
 # Botón para mostrar u ocultar la información
