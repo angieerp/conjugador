@@ -158,7 +158,7 @@ st.header('Número', divider='rainbow')
 
 numero = st.radio(
     "Seleccione un número",
-    ["singular", "llural"],
+    ["singular", "plural"],
     captions = ["Una persona", "Dos personas o más"])
 
 st.write("**Seleccionaste:**", numero)
