@@ -193,4 +193,4 @@ st.markdown(f'<p style="text-align: justify;">{texto}</p>', unsafe_allow_html=Tr
 # Botón para redireccionar a otra página web
 if st.button("¡Presiona aquí para conocer más!"):
     url = "https://repositorio.pucp.edu.pe/index/handle/123456789/134454"
-    st.markdown(f'<meta http-equiv="refresh" content="0;URL=\'{url}\'" />', unsafe_allow_html=True)
+    st.markdown(f'<a href="{url}" target="_blank" rel="noopener noreferrer">Ir a Google</a>', unsafe_allow_html=True)
