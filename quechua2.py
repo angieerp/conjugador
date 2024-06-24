@@ -155,9 +155,11 @@ st.write("**Seleccionaste:**",tiempo)
 import streamlit as st
 
 st.header('Número', divider='rainbow')
-numero = st.selectbox(
-    "Seleccione un número:",
-    ["singular","plural"])
+
+numero = st.radio(
+    "Seleccione un número",
+    ["Singular", "Plural"],
+    captions = ["Una persona", "Dos personas o más"])
 
 st.write("**Seleccionaste:**", numero)
 st.write("**El verbo conjugado es:**", conjugacion2(base,numero,persona,tiempo))
