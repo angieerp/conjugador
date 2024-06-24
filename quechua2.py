@@ -104,7 +104,7 @@ base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
 
     
-st.write("El verbo en espanol es:",dict_que_esp[base])
+st.write("**El verbo en español es:**",dict_que_esp[base])
 
 if base.endswith('y'):
     base = base[:-1]
