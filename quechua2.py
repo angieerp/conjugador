@@ -142,16 +142,11 @@ explicaciones_tiempo = {
 }
 
 st.header('Tiempo', divider='rainbow')
-tiempo = st.selectbox(
-    "Seleccione un tiempo:",
-    list(explicaciones_tiempo.keys())
-)
+tiempo = st.selectbox("Seleccione un tiempo:", list(explicaciones_tiempo.keys()))
 
-
-
-if tiempo:
-    
-    st.write(explicaciones_tiempo[tiempo])
+if tiempo in explicaciones_tiempo:
+    if st.button(f"ℹ️ ¿Qué es el tiempo '{tiempo}'?"):
+        st.write(explicaciones_tiempo[tiempo])
 
 st.write("**Seleccionaste:**",tiempo)
 #para número
