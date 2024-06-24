@@ -185,7 +185,12 @@ st.image(ruta_imagen_local2, use_column_width=True)
 st.header ('¿Por qué es importante aprender quechua?')
 
 texto = """
-    Aprender quechua en Perú es como desbloquear una puerta encantada que te lleva a explorar la riqueza cultural de este país maravilloso. No solo te permite conectar de manera auténtica con millones de personas y sumergirte en sus relatos y costumbres, sino que también es como descubrir un tesoro lingüístico lleno de sonidos y expresiones únicas.
+    Aprender quechua en Perú es como desbloquear una puerta encantada que te lleva a explorar la riqueza cultural de este país maravilloso. No solo te permite conectar de manera auténtica con millones de personas y sumergirte en sus relatos y costumbres, sino que también es como descubrir un tesoro lingüístico lleno de sonidos y expresiones únicas. Si deseas aprender más sobre esta variedad del quechua puedes visitar el enlace que encuentras justo abajo.
     """
 
 st.markdown(f'<p style="text-align: justify;">{texto}</p>', unsafe_allow_html=True)
+
+# Botón para redireccionar a otra página web
+if st.button("¡Presiona aquí para conocer más!"):
+    url = "https://repositorio.pucp.edu.pe/index/handle/123456789/134454"
+    st.markdown(f'<meta http-equiv="refresh" content="0;URL=\'{url}\'" />', unsafe_allow_html=True)
