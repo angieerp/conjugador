@@ -164,7 +164,7 @@ numero = st.radio(
 st.write("**Seleccionaste:**", numero)
 st.write(":rainbow[**El verbo conjugado es:**]", conjugacion2(base,numero,persona,tiempo))
 
-ruta_imagen_local2 = "quechuaniños.jpg"
+ruta_imagen_local2 = "quechuaimagen.jpg"
 
 st.image(ruta_imagen_local2, use_column_width=True)
 
