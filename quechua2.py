@@ -162,5 +162,9 @@ numero = st.radio(
     captions = ["Una persona", "Dos personas o más"])
 
 st.write("**Seleccionaste:**", numero)
-st.write("**El verbo conjugado es:**", conjugacion2(base,numero,persona,tiempo))
+st.write(":rainbow[**El verbo conjugado es:**]", conjugacion2(base,numero,persona,tiempo))
+
+ruta_imagen_local2 = "quechuaniños.jpg"
+
+st.image(ruta_imagen_local2, use_column_width=True)
 
