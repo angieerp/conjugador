@@ -106,7 +106,7 @@ imagenes_verbo = {
         "apay": "llevar.jpg",
         "tusuy": "bailar.jpg",
         "rimay": "hablar.jpg",
-        "puñuy": "dormir"
+        "puñuy": "dormir.jpg"
         
 }
 
