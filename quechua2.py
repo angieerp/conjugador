@@ -8,7 +8,9 @@ import pandas as pd
 
 import streamlit as st
 
+ruta_imagen_local = "quechuacolores.jpg"
 
+st.image(ruta_imagen_local, use_column_width=True)
 
 st.title(':rainbow[Conjugador de verbos en quechua]')
 
