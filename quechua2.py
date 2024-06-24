@@ -100,10 +100,23 @@ dict_que_esp = dict(zip(quechua,espanol))
 import streamlit as st
 import streamlit as st
 
+imagenes_verbo = {
+        "tiyay": "vivir.jpg",
+        "mikuy": "comer.jpg",
+        "apay": "llevar.jpg",
+        "tusuy": "bailar.jpg",
+        "rimay": "hablar.jpg",
+        "puñuy": "dormir"
+        
+}
+
 st.header('Verbo', divider='rainbow')
 base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
 
+if base in imagenes_verbo:
+   ruta_imagen_verbo = imagenes_verbo[base]
+   st.image(ruta_imagen_verbo, use_column_width=True)
     
 st.write("**El verbo en español es:**",dict_que_esp[base])
 
