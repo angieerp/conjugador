@@ -5,6 +5,7 @@
 #leemos el excel
 
 import pandas as pd
+import os
 
 import streamlit as st
 
@@ -110,9 +111,13 @@ imagenes_verbo = {
         
 }
 
+ruta_audio = "verbos_audios/"
+
 st.header('Verbo', divider='rainbow')
 base = st.selectbox(
     "Seleccione un verbo en quechua",quechua)
+
+
 
 if base in imagenes_verbo:
    ruta_imagen_verbo = imagenes_verbo[base]
@@ -120,8 +125,20 @@ if base in imagenes_verbo:
     
 st.write("**El verbo en español es:**",dict_que_esp[base])
 
+nombre_audio = base + ".m4a"
+ruta_completa_audio = os.path.join(ruta_audio,nombre_audio)
+
+if os.path.exists(ruta_completa_audio):
+    st.audio(ruta_completa_audio)
+
+else:
+    st.warning(f"No se encontro archivo de audio para el verbo '{base}'.")
+
+
 if base.endswith('y'):
     base = base[:-1]
+    
+    
 
 #para persona
 import streamlit as st
