@@ -83,8 +83,9 @@ def conjugacion2(base,numero,persona,tiempo):
          st.error(f"Clave '{persona}' no encontrada en el diccionario anidado dentro de 'D[{tiempo}][{numero}]'.")
          return
      
+    conjugacion = dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
     audio_file = f"audios/{base}_{persona}_{tiempo}_{numero}.m4a"
-    return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona], audio_file
+    return conjugacion, audio_file
     
 
 #######################################################################
@@ -195,12 +196,15 @@ numero = st.radio(
     captions = ["Una persona", "Dos personas o más"])
 
 st.write("**Seleccionaste:**", numero)
-st.write(":rainbow[**El verbo conjugado es:**]", conjugacion2(base,numero,persona,tiempo))
 
-audio_file = None
+conjugado, audio_file = conjugacion2(base, numero, persona, tiempo)
+if conjugado:
+    st.write(":rainbow:**El verbo conjugado es:**", conjugado)
+    if audio_file and os.path.exists(audio_file):
+        st.audio(audio_file)
+    else:
+        st.warning(f"No se encontró archivo de audio para la conjugación '{base}'.")
 
-if audio_file and os.path.exists(audio_file):
-    st.audio(audio_file)
 
 ruta_imagen_local2 = "quechuaimagen.jpg"
 
