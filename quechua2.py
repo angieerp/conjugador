@@ -199,7 +199,7 @@ st.write("**Seleccionaste:**", numero)
 
 conjugado, audio_file = conjugacion2(base, numero, persona, tiempo)
 if conjugado:
-    st.write(":rainbow:**El verbo conjugado es:**", conjugado)
+    st.write(":rainbow[**El verbo conjugado es:**]", conjugado)
     if audio_file and os.path.exists(audio_file):
         st.audio(audio_file)
     else:
